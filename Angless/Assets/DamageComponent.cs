@@ -16,7 +16,7 @@ public class DamageComponent : MonoBehaviour
         float curDamage = baseDamage * damageMultiplier;
         if (Random.Range((float) 0.0, (float) 1.0) < critRate)
             curDamage *= critMultiplier;
-        target.GetComponent<HealthComponent>().takeDamage(baseDamage * damageMultiplier);
+        target.GetComponent<HealthComponent>().takeDamage(curDamage);
     }
 
     // next functions change something by x (can be negative)
