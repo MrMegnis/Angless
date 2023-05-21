@@ -222,11 +222,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1471768411 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4566383620875245389, guid: 0e8f23a281446e540979fc79ac583556, type: 3}
-  m_PrefabInstance: {fileID: 4566383621603536918}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1850775291
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,8 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83723019531c8e44acf4f80685ced3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  palyerMovement: {fileID: 2064713814}
-  Weapon: {fileID: 1471768411}
+  Weapon: {fileID: 4566383620875245389, guid: 0e8f23a281446e540979fc79ac583556, type: 3}
 --- !u!114 &2064713814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,7 +695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4566383620875245389, guid: 0e8f23a281446e540979fc79ac583556, type: 3}
       propertyPath: m_Name
-      value: Dot
+      value: Point
       objectReference: {fileID: 0}
     - target: {fileID: 4566383620875245431, guid: 0e8f23a281446e540979fc79ac583556, type: 3}
       propertyPath: owner

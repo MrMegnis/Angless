@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4566383620875245386}
   - component: {fileID: 4566383620875245430}
   m_Layer: 0
-  m_Name: Dot
+  m_Name: Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,6 +117,8 @@ MonoBehaviour:
   attackArea: {fileID: 4566383620875245386}
   targetTag: Enemy
   mc: {fileID: 4566383620875245428}
+  destroyOnCollision: 1
+  destroyTime: 1
 --- !u!58 &4566383620875245386
 CircleCollider2D:
   m_ObjectHideFlags: 0
