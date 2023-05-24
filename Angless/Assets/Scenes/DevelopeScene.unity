@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 2064713815}
   - component: {fileID: 2064713814}
   - component: {fileID: 2064713813}
+  - component: {fileID: 2064713821}
   - component: {fileID: 2064713820}
   - component: {fileID: 2064713819}
   - component: {fileID: 2064713812}
@@ -492,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83723019531c8e44acf4f80685ced3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 4566383620875245389, guid: 0e8f23a281446e540979fc79ac583556, type: 3}
+  weaponHolder: {fileID: 2064713821}
 --- !u!114 &2064713814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,6 +643,19 @@ MonoBehaviour:
   curHP: 0
   damageImmuneTimer: 0
   damageImmune: 0.5
+--- !u!114 &2064713821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064713811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0379c04a36f8341b7d3923ce010703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 4566383620875245389, guid: 0e8f23a281446e540979fc79ac583556, type: 3}
 --- !u!1001 &4566383621603536918
 PrefabInstance:
   m_ObjectHideFlags: 0

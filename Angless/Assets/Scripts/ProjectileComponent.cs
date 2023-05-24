@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(MovementComponent))]
-public class BulletComponent : WeaponComponent {
+public class ProjectileComponent : WeaponComponent {
     public MovementComponent mc;
-    public bool destroyOnCollision = true; // Set true if you want to destroy bullet after collision
-    protected float destroyTimer; // Timer for bullet destroy
-    public float destroyTime; // Destroy bullet after this time
+    public bool destroyOnCollision = true; // Set true if you want to destroy projectile after collision
+    protected float destroyTimer; // Timer for projectile destroy
+    public float destroyTime; // Destroy projectile after this time
 
     protected override void Start() {
         base.Start();
@@ -27,8 +27,8 @@ public class BulletComponent : WeaponComponent {
             Destroy(gameObject);
         }
     }
-    public override void setWeaponDirection(Vector2 newDirection) {
-        base.setWeaponDirection(newDirection);
+    public override void setDirection(Vector2 newDirection) {
+        base.setDirection(newDirection);
         mc.setDirection(weaponDirection);
     }
     

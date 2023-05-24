@@ -12,8 +12,8 @@ public class DamageComponent : MonoBehaviour
 
     // takes target object, deal baseDamge multiplied by damageMultiplier, critical hit may occurs with critRate probability.
 
-    public void dealDamage(GameObject target) {
-        float curDamage = baseDamage * damageMultiplier;
+    public void dealDamage(GameObject target, float multiplier = 1) {
+        float curDamage = baseDamage * damageMultiplier * multiplier;
         if (Random.Range((float) 0.0, (float) 1.0) < critRate)
             curDamage *= critMultiplier;
         target.GetComponent<HealthComponent>().takeDamage(curDamage);

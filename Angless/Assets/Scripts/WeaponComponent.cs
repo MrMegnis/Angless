@@ -7,6 +7,7 @@ public class WeaponComponent : MonoBehaviour {
     public GameObject owner;
     protected DamageComponent ownerDamageComponent;
     public Collider2D attackArea;
+    public float weaponMultiplier = 1;
     public string targetTag;
     protected Vector2 weaponDirection;
     virtual protected void Start() {
@@ -27,7 +28,10 @@ public class WeaponComponent : MonoBehaviour {
         }
     }
 
-    virtual public void setWeaponDirection(Vector2 newDirection) {
+    virtual public void setDirection(Vector2 newDirection) {
         weaponDirection = newDirection;
+    }
+    public void setWeaponMultiplier(float newWeaponMultiplier) {
+        weaponMultiplier = newWeaponMultiplier;
     }
 }
