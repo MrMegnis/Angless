@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
     // Component response for player input
     Vector2 direction;
     private MovementComponent palyerMovement;
-    public GameObject Weapon;
+    public WeaponHolderComponent weaponHolder;
 
     private void Start() {
         palyerMovement = GetComponent<MovementComponent>();
@@ -35,12 +35,6 @@ public class PlayerController : MonoBehaviour {
     /// Spawn weapon in player position and set its direction to mouse.
     /// </summary>
     private void OnFire() {
-        Vector2 mouseCord = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 curPosition = transform.position;
-        Vector2 fireDirection = mouseCord - curPosition;
-        fireDirection.Normalize();
-        GameObject w = Instantiate(Weapon, this.gameObject.transform.position, Quaternion.identity);
-        w.GetComponent<WeaponComponent>().owner = this.gameObject;
-        w.GetComponent<WeaponComponent>().setWeaponDirection(fireDirection);
+        weaponHolder.Attack();
     }
 }

@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 980740821}
   - component: {fileID: 980740820}
   - component: {fileID: 980740819}
+  - component: {fileID: 980740827}
   - component: {fileID: 980740825}
   - component: {fileID: 980740818}
   - component: {fileID: 980740826}
@@ -241,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83723019531c8e44acf4f80685ced3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 4566383620875245389, guid: 0e8f23a281446e540979fc79ac583556, type: 3}
+  weaponHolder: {fileID: 980740827}
 --- !u!114 &980740820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +392,19 @@ MonoBehaviour:
   damageMultiplier: 1
   critRate: 0
   critMultiplier: 2
+--- !u!114 &980740827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980740817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0379c04a36f8341b7d3923ce010703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 4566383620875245389, guid: 0e8f23a281446e540979fc79ac583556, type: 3}
 --- !u!1 &1265363963
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +489,7 @@ MonoBehaviour:
   maxHP: 100
   curHP: 0
   damageImmuneTimer: 0
-  damageImmune: 0.5
+  damageImmune: 0
 --- !u!212 &1265363967
 SpriteRenderer:
   m_ObjectHideFlags: 0
