@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class HealthComponent : MonoBehaviour
-{
-
+public class HealthComponent : MonoBehaviour {
     public float maxHP = 100;
     public float curHP = 0; // curHP cann't become higher than maxHP.
     public float damageImmuneTimer = 0; // if <= 0, no damge immune, else show remaining immune time
     public float damageImmune = (float) 0.5; // immune time after taking damage in second;
+    public UnityEvent OnDie; // Functions that will call when hp reaches 0;
 
     void Start() {
         curHP = maxHP;
@@ -41,6 +41,7 @@ public class HealthComponent : MonoBehaviour
     // destroy the object, huge changing are coming
     [ContextMenu("Kill")]
     public void kill() {
+        OnDie?.Invoke(); // Needed functions call
         Destroy(gameObject);
     }
 }
