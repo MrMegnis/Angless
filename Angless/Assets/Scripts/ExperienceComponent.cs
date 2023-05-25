@@ -7,7 +7,7 @@ public class ExperienceComponent : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collider2D) {
         GameObject target = collider2D.gameObject;
         if (target.tag == "Player") {
-            LevelSystemComponent levelSystem = target.GetComponent<LevelSystemComponent>();
+            ExperienceSystemComponent levelSystem = target.GetComponent<ExperienceSystemComponent>();
             levelSystem.GainXP(experienceAmount);
             Destroy(gameObject);
         }
