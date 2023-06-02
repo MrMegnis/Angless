@@ -419,6 +419,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 483898756543579534, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
   m_PrefabInstance: {fileID: 483898754749533652}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2064713826 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 483898756543579530, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
+  m_PrefabInstance: {fileID: 483898754749533652}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064713811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b959c5e497ff245b3f7d20268f7168, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &483898754749533652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -473,6 +484,42 @@ PrefabInstance:
     - target: {fileID: 483898756543579534, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062991553244883311, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
+      propertyPath: requiredXP
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062991553244883311, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
+      propertyPath: requiredXPGrowth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062991553244883311, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
+      propertyPath: onXPReset.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062991553244883311, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
+      propertyPath: onXPReset.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062991553244883311, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
+      propertyPath: onXPReset.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2064713826}
+    - target: {fileID: 5062991553244883311, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
+      propertyPath: onXPReset.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062991553244883311, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
+      propertyPath: onXPReset.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062991553244883311, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
+      propertyPath: onXPReset.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelSystemComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062991553244883311, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
+      propertyPath: onXPReset.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85ac3f8178143e341833d3c5ff6cad64, type: 3}
