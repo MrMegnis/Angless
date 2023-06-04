@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 33860109}
   - component: {fileID: 33860111}
   - component: {fileID: 33860108}
+  - component: {fileID: 33860112}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -161,6 +162,9 @@ MonoBehaviour:
   curHP: 0
   damageImmuneTimer: 0
   damageImmune: 0.5
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &33860106
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -242,7 +246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHP: {fileID: 0}
   moveComp: {fileID: 33860109}
-  agressionTarget: {fileID: 0}
+  dmgComp: {fileID: 33860112}
+  targetTag: Player
 --- !u!114 &33860109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,7 +269,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33860101}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -305,6 +310,22 @@ PolygonCollider2D:
     - - {x: -1.3208976, y: -0.60529524}
       - {x: -0.91602975, y: 1.3150116}
       - {x: 1.5066395, y: -0.6059673}
+--- !u!114 &33860112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33860101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d97f1b7535d2b43b7f65caf04642b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 7.54
+  damageMultiplier: 1
+  critRate: 0
+  critMultiplier: 2
 --- !u!1 &452949732
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,6 +359,9 @@ MonoBehaviour:
   curHP: 0
   damageImmuneTimer: 0
   damageImmune: 0.5
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &452949734
 Transform:
   m_ObjectHideFlags: 0
@@ -364,6 +388,7 @@ GameObject:
   - component: {fileID: 1551835671}
   - component: {fileID: 1551835670}
   - component: {fileID: 1551835672}
+  - component: {fileID: 1551835673}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -466,6 +491,25 @@ PolygonCollider2D:
     - - {x: -1.3849294, y: -0.6373114}
       - {x: -0.93737346, y: 1.3897163}
       - {x: 1.5493283, y: -0.63798344}
+--- !u!114 &1551835673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551835669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dac1576cd8eadb2438bee37f22265a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 100
+  curHP: 0
+  damageImmuneTimer: 0
+  damageImmune: 0.5
+  OnDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1771762311
 GameObject:
   m_ObjectHideFlags: 0
