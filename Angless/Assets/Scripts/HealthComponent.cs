@@ -6,7 +6,8 @@ public class HealthComponent : MonoBehaviour
 {
 
     public float maxHP = 100;
-    public float curHP = 0; // curHP cann't become higher than maxHP.
+    [SerializeField]
+    private float curHP = 0; // curHP cann't become higher than maxHP.
     public float damageImmuneTimer = 0; // if <= 0, no damge immune, else show remaining immune time
     public float damageImmune = (float) 0.5; // immune time after taking damage in second;
 

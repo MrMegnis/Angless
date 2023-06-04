@@ -18,11 +18,12 @@ public class MovementComponent : MonoBehaviour {
     private void FixedUpdate() {
         Move(direction);
     }
+
     public void Move(Vector2 direction) {
-        rb.MovePosition(rb.position + direction * speed);
+        rb.MovePosition(rb.position + direction * speed * Time.deltaTime);
     }
 
     public void setDirection(Vector2 newDirection) {
-        direction = newDirection;
+        direction = newDirection.normalized;
     }
 }
