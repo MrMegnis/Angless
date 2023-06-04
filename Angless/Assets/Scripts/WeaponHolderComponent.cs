@@ -6,8 +6,7 @@ using UnityEngine;
 /// <summary>   
 /// Class need for weapon control
 /// </summary>
-public class WeaponHolderComponent : MonoBehaviour
-{
+public class WeaponHolderComponent : MonoBehaviour {
     public GameObject weaponPrefab;
     void Start() {
         
@@ -23,7 +22,7 @@ public class WeaponHolderComponent : MonoBehaviour
         Vector2 curPosition = transform.position;
         Vector2 fireDirection = mouseCord - curPosition;
         fireDirection.Normalize();
-        GameObject weapon = Instantiate(weaponPrefab, this.gameObject.transform.position, Quaternion.identity);
+        GameObject weapon = Instantiate(weaponPrefab, gameObject.transform.position, Quaternion.identity);
         WeaponComponent weaponComponent = weapon.GetComponent<WeaponComponent>();
         weaponComponent.owner = gameObject;
         weaponComponent.setDirection(fireDirection);

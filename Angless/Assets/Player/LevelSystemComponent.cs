@@ -4,41 +4,19 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class LevelSystemComponent : MonoBehaviour {
-    public int requiredXP;
-    public int requiredXPGrowth;
-    [HideInInspector]
-    public int currentXP = 0;
     public int level = 1;
-    public UnityEvent onLevelUp; // Function that call when level up;
-
-    void Start() {
-        
-    }
-    void Update() {
-        
-    }
+    public UnityEvent onLevelUp; // Functions that will call when level up;
     /// <summary>   
-    /// Add experience
+    /// Increase level by 1 and do other needed stuff
     /// </summary>
     public void LevelUp() {
         level++;
-        requiredXP += requiredXPGrowth;
-        onLevelUp?.Invoke(); // Function call
-        
+        onLevelUp?.Invoke(); // Needed functions call
     }
-    /// <summary>   
-    /// Add experience
-    /// </summary>
-
-    public void GainXP(int amount) {
-        currentXP += amount;
-        if (currentXP >= requiredXP) {
-            currentXP = currentXP - requiredXP;
-            LevelUp();
-        }
+    public void Print1(string s) {
+        Debug.Log("Level up! " + s);
     }
-    public void Print() {
-        Debug.Log("Level up!");
+    public void Print2() {
         Debug.Log(level);
     }
 }
