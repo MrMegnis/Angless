@@ -10,7 +10,6 @@ abstract public class BaseEnemy: MonoBehaviour
     protected GameObject agressionTarget;
     public string targetTag;
 
-
     void setAggression(GameObject target) {
         agressionTarget = target;
 
@@ -31,7 +30,7 @@ abstract public class BaseEnemy: MonoBehaviour
         Move();
     }
 
-    void Death() {
+    public void Death() {
         Destroy(gameObject);
         Debug.Log("Death");
     }

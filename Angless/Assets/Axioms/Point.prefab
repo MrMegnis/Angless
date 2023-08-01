@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5d3c52dc23406479475a9d6f24eaa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  speed: 6.62
 --- !u!114 &4566383620875245431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   attackArea: {fileID: 4566383620875245386}
+  weaponMultiplier: 1
   targetTag: Enemy
   mc: {fileID: 4566383620875245428}
   destroyOnCollision: 1

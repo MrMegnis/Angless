@@ -43,6 +43,5 @@ public class HealthComponent : MonoBehaviour {
     [ContextMenu("Kill")]
     public void kill() {
         OnDie?.Invoke(); // Needed functions call
-        Destroy(gameObject);
     }
 }

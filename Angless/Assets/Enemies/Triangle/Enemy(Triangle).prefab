@@ -13,7 +13,10 @@ GameObject:
   - component: {fileID: 2233954125410155394}
   - component: {fileID: 2198373831211714938}
   - component: {fileID: 2233954125410155393}
-  - component: {fileID: 2233954125410155392}
+  - component: {fileID: 5806162291961363903}
+  - component: {fileID: 2895681062458502877}
+  - component: {fileID: 7141060491116822287}
+  - component: {fileID: 7326878631608422619}
   m_Layer: 0
   m_Name: Enemy(Triangle)
   m_TagString: Enemy
@@ -119,6 +122,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5806162291961363903}
+        m_TargetAssemblyTypeName: BaseEnemy, Assembly-CSharp
+        m_MethodName: Death
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2198373831211714938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +176,39 @@ PolygonCollider2D:
     - - {x: 0, y: 0.5773587}
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
---- !u!50 &2233954125410155392
+--- !u!114 &5806162291961363903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233954125410155399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ff1bd90d9b7824b8c2e721fea2c752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHP: {fileID: 2233954125410155394}
+  moveComp: {fileID: 7326878631608422619}
+  dmgComp: {fileID: 2895681062458502877}
+  targetTag: Player
+--- !u!114 &2895681062458502877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233954125410155399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d97f1b7535d2b43b7f65caf04642b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 4.65
+  damageMultiplier: 1
+  critRate: 0
+  critMultiplier: 2
+--- !u!50 &7141060491116822287
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -169,7 +216,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2233954125410155399}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -182,3 +229,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7326878631608422619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233954125410155399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5d3c52dc23406479475a9d6f24eaa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.47
